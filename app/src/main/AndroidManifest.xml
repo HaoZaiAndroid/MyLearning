@@ -19,6 +19,7 @@
             android:name=".databinding.DataBindingActivity"
             android:theme="@style/AppTheme" >
         </activity>
+        <activity android:name=".dragger2.ParkingActivity" />
     </application>
 
 </manifest>
