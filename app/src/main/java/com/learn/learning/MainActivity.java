@@ -1,25 +1,35 @@
 package com.learn.learning;
 
-import android.databinding.DataBindingUtil;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
-import com.learn.learning.databinding.ActivityMainBinding;
-import com.learn.learning.databinding.Person;
+import com.learn.learning.databinding.DataBindingActivity;
 
-public class MainActivity extends AppCompatActivity {
-    ActivityMainBinding mMainBinding;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        setContentView(R.layout.activity_main);
+        init();
     }
-
-    public void testBinding() {
-        Person person = new Person();
-        person.setAge("18");
-        person.setBirthday("10.01");
-        person.setName("洪三元");
-        mMainBinding.setVariable(BR.person, person);
+    private void init() {
+        View binding = findViewById(R.id.bt_binding);
+        binding.setOnClickListener(this);
+    }
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.bt_binding:
+                Intent bindingIntent = new Intent();
+                bindingIntent.setClass(this,DataBindingActivity.class);
+                startActivity(bindingIntent);
+                break;
+            default:
+                break;
+        }
     }
 }
