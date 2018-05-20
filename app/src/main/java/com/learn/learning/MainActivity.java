@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.learn.learning.databinding.DataBindingActivity;
-import com.learn.learning.dragger2.ParkingActivity;
+import com.learn.learning.dragger2.activity.TestActivity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bt_dagger:
                 Intent daggerIntent = new Intent();
-                daggerIntent.setClass(this, ParkingActivity.class);
+                daggerIntent.setClass(this, TestActivity.class);
                 startActivity(daggerIntent);
                 break;
             default:
