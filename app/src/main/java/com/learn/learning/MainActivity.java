@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.learn.learning.databinding.DataBindingActivity;
+import com.learn.learning.dragger2.ParkingActivity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -16,17 +17,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         init();
     }
+
     private void init() {
         View binding = findViewById(R.id.bt_binding);
+        View dagger = findViewById(R.id.bt_dagger);
         binding.setOnClickListener(this);
+        dagger.setOnClickListener(this);
     }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.bt_binding:
                 Intent bindingIntent = new Intent();
-                bindingIntent.setClass(this,DataBindingActivity.class);
+                bindingIntent.setClass(this, DataBindingActivity.class);
                 startActivity(bindingIntent);
+                break;
+            case R.id.bt_dagger:
+                Intent daggerIntent = new Intent();
+                daggerIntent.setClass(this, ParkingActivity.class);
+                startActivity(daggerIntent);
                 break;
             default:
                 break;

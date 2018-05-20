@@ -21,23 +21,24 @@ android {
         enabled = true
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     implementation 'com.google.dagger:dagger-android:2.16'
-    implementation 'com.google.dagger:dagger-android-support:2.16' // if you use the support libraries
+    implementation 'com.google.dagger:dagger-android-support:2.16'
+    // if you use the support libraries
     annotationProcessor 'com.google.dagger:dagger-android-processor:2.16'
-    annotationProcessor 'com.google.dagger:dagger-compiler:2.16'
     //使用apt build dagger-compiler编译器
     compileOnly 'javax.annotation:jsr250-api:1.0'
     //必须配置，dagger缺少 javax.annotation包
-    api 'com.google.dagger:dagger:2.16'
+    implementation 'com.google.dagger:dagger:2.16'
     //必须配置，引用dagger框架，运行时必备
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.16'
 }

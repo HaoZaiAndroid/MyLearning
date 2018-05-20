@@ -11,4 +11,11 @@
         android:text="@string/test_binding"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/bt_dagger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/test_dagger"
+        android:textAllCaps="false" />
+
 </LinearLayout>
