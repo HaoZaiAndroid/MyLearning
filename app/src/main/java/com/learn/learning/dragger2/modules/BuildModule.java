@@ -12,5 +12,5 @@ public abstract class BuildModule {
 
     @TestScope
     @ContributesAndroidInjector(modules = TestModule.class)
-    abstract TestActivity contributeSecondActivityInjector();
+    abstract TestActivity contributeTestActivityInjector();
 }
