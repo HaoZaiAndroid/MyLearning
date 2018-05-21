@@ -2,6 +2,7 @@ package com.learn.learning.dragger2.components;
 
 import com.learn.learning.dragger2.LearingApp;
 import com.learn.learning.dragger2.modules.AppModule;
+import com.learn.learning.dragger2.modules.BuildModule;
 
 import javax.inject.Singleton;
 
@@ -12,6 +13,7 @@ import dagger.android.support.AndroidSupportInjectionModule;
 @Singleton
 @Component(modules = {
         AppModule.class,
+        BuildModule.class,
         AndroidSupportInjectionModule.class})
 public interface AppComponent extends AndroidInjector<LearingApp> {
 
