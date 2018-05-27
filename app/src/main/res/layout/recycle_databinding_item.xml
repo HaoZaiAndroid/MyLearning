@@ -9,30 +9,36 @@
             type="com.learn.learning.databinding.Person" />
     </data>
 
-    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/databind"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
         android:orientation="vertical"
+        android:background="@color/colorAccent"
         tools:context="com.learn.learning.databinding.DataBindingActivity">
 
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:text="@{person.name}" />
 
         <TextView
             android:id="@+id/tv_age"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_centerHorizontal="true"
             android:text="@{person.age}" />
 
         <TextView
             android:id="@+id/tv_birthday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/tv_age"
+            android:layout_centerHorizontal="true"
             android:text="@{person.birthday}" />
 
-    </LinearLayout>
+    </RelativeLayout>
 </layout>

@@ -4,25 +4,44 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 
-import com.learn.learning.BR;
 import com.learn.learning.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class DataBindingActivity extends AppCompatActivity{
-    ActivityDatabindingBinding mBinding;
+    ActivityDatabingBinding mBinding;
     private Person person;
+    List<Person> datas = new ArrayList<>();
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_databinding);
-       testBinding();
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_databing);
+        init();
     }
 
-    public void testBinding() {
-        Person person = new Person();
-        person.setAge("18");
-        person.setBirthday("10.01");
-        person.setName("洪三元");
-        mBinding.setVariable(BR.person, person);
+    private void init() {
+        initData();
+        initView();
     }
+
+    private void initView() {
+        mBinding.rv.setLayoutManager(new GridLayoutManager(this, 2));
+        ListAdapter listAdapter = new ListAdapter(this,datas);
+        mBinding.rv.setAdapter(listAdapter);
+    }
+
+    private void initData() {
+        for (int i = 0; i < 25; i++) {
+            Person person = new Person();
+            person.setName("姓名" + i);
+            person.setBirthday("生日" + i);
+            person.setAge("年龄" + i);
+            datas.add(person);
+        }
+    }
+
+
 }
