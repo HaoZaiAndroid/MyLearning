@@ -1,8 +1,10 @@
-package com.learn.learning;
+package com.learn.learning.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+
+import com.learn.learning.R;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
