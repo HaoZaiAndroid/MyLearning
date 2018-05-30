@@ -1,12 +1,8 @@
 package com.learn.learning;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-
-import com.learn.learning.databinding.DataBindingActivity;
-import com.learn.learning.dragger2.activity.TestActivity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -15,7 +11,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        init();
     }
 
     private void init() {
@@ -28,16 +23,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.bt_binding:
-                Intent bindingIntent = new Intent();
-                bindingIntent.setClass(this, DataBindingActivity.class);
-                startActivity(bindingIntent);
-                break;
-            case R.id.bt_dagger:
-                Intent daggerIntent = new Intent();
-                daggerIntent.setClass(this, TestActivity.class);
-                startActivity(daggerIntent);
-                break;
             default:
                 break;
         }
