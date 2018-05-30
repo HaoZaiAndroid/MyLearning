@@ -13,12 +13,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
     }
 
-    private void init() {
-        View binding = findViewById(R.id.bt_binding);
-        View dagger = findViewById(R.id.bt_dagger);
-        binding.setOnClickListener(this);
-        dagger.setOnClickListener(this);
-    }
 
     @Override
     public void onClick(View v) {
