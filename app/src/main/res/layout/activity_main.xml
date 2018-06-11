@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
 
-<TextView
-    android:text="main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" />
-</RelativeLayout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <data>
+
+    </data>
+
+    <android.support.v4.widget.DrawerLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.learn.learning.activity.MainActivity">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/app_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/color_page_bg"
+            android:clickable="true"
+            android:fitsSystemWindows="true" />
+    </android.support.v4.widget.DrawerLayout>
+</layout>
