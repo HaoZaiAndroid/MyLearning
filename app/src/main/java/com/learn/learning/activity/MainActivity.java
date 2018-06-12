@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void init() {
         initViewID();
         StatusBarUtil.setTranslucentForDrawerLayout(this, mDrawerLayout, 0);
+        initStatusView();
     }
     private void initViewID() {
         mNavView = mainBinding.navView;
