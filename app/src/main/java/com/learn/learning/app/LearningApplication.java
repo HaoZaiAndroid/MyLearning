@@ -1,18 +1,14 @@
 package com.learn.learning.app;
 
-import android.app.Application;
+import com.learn.learning.components.DaggerAppComponent;
 
-public class LearningApplication extends Application {
+import dagger.android.AndroidInjector;
+import dagger.android.support.DaggerApplication;
 
-    private static LearningApplication learningApplication;
-
-    public static LearningApplication getInstance() {
-        return learningApplication;
-    }
+public class LearningApplication extends DaggerApplication {
 
     @Override
-    public void onCreate() {
-        super.onCreate();
-        learningApplication = this;
+    protected AndroidInjector<? extends DaggerApplication> applicationInjector() {
+        return DaggerAppComponent.builder().create(this);
     }
 }

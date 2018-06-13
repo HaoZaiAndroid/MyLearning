@@ -13,7 +13,12 @@
             android:layout_height="24dp"
             android:background="@color/colorTheme"
             android:visibility="visible" />
-
+        <RelativeLayout
+            android:layout_below="@id/view_status"
+            android:id="@+id/main_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </RelativeLayout>
 
     </RelativeLayout>
 </layout>

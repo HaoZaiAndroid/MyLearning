@@ -1,6 +1,7 @@
 package com.learn.learning.activity;
 
 import android.databinding.DataBindingUtil;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -11,10 +12,19 @@ import android.view.ViewGroup;
 
 import com.learn.learning.R;
 import com.learn.learning.databinding.ActivityMainBinding;
+import com.learn.learning.fragment.MainFragment;
 import com.learn.learning.utils.StatusBarUtil;
+
+import javax.inject.Inject;
+
+import dagger.android.AndroidInjection;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+//    @Inject
+//    TestBean mTest;
+    @Inject
+    MainFragment mainFragment;
 
     NavigationView mNavView;
     ActivityMainBinding mainBinding;
@@ -22,11 +32,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        AndroidInjection.inject(this);
         immersiveStatusBar();
         super.onCreate(savedInstanceState);
         mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         init();
-
+       // mTest.showlog();
+        mainFragment.showlog();
     }
 
     private void initStatusView() {
@@ -39,13 +51,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             View decorView = getWindow().getDecorView();
             int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
             decorView.setSystemUiVisibility(option);
-           // getWindow().setStatusBarColor(Color.TRANSPARENT);
+           getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
     }
 
     private void init() {
         initViewID();
-        StatusBarUtil.setTranslucentForDrawerLayout(this, mDrawerLayout, 0);
         initStatusView();
     }
     private void initViewID() {

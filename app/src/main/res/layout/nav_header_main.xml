@@ -7,31 +7,13 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="192dp"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+        android:layout_height="192dp">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/ic_nav_bg_drawerlayout"
             android:scaleType="centerCrop"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginBottom="24dp"
-            android:padding="16dp"
-            android:text="Jaeger"
-            android:textColor="@android:color/white"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:padding="16dp"
-            android:text="写代码的猴子"
-            android:textColor="@android:color/white"
-            android:textSize="12sp"/>
 
     </FrameLayout>
 
