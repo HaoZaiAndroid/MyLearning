@@ -5,7 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activitys.main.MainActivity">
+        tools:context=".activitys.main.MainDaggerActivity">
         <!--状态栏-->
         <View
             android:id="@+id/view_status"
