@@ -1,8 +1,5 @@
-package com.learn.learning.components;
+package com.learn.learning.activitys.main;
 
-import com.learn.learning.activity.MainActivity;
-import com.learn.learning.modules.MainActivityModule;
-import com.learn.learning.scopes.PerActivity;
 
 import dagger.Subcomponent;
 import dagger.android.AndroidInjector;

@@ -1,4 +1,4 @@
-package com.learn.learning.activity;
+package com.learn.learning.activitys.main;
 
 import android.databinding.DataBindingUtil;
 import android.graphics.Color;
@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 
 import com.learn.learning.R;
 import com.learn.learning.databinding.ActivityMainBinding;
-import com.learn.learning.fragment.MainFragment;
 import com.learn.learning.utils.StatusBarUtil;
 
 import javax.inject.Inject;
@@ -21,8 +20,6 @@ import dagger.android.AndroidInjection;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-//    @Inject
-//    TestBean mTest;
     @Inject
     MainFragment mainFragment;
 
@@ -37,7 +34,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         init();
-       // mTest.showlog();
         mainFragment.showlog();
     }
 

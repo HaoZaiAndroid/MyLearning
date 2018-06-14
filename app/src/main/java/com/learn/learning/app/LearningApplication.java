@@ -1,6 +1,6 @@
 package com.learn.learning.app;
 
-import com.learn.learning.components.DaggerAppComponent;
+import com.learn.learning.di.DaggerAppComponent;
 
 import dagger.android.AndroidInjector;
 import dagger.android.support.DaggerApplication;

@@ -1,4 +1,4 @@
-package com.learn.learning.fragment;
+package com.learn.learning.activitys.main;
 
 import android.app.Fragment;
 import android.databinding.DataBindingUtil;

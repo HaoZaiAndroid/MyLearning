@@ -1,8 +1,6 @@
-package com.learn.learning.components;
+package com.learn.learning.di;
 
 import com.learn.learning.app.LearningApplication;
-import com.learn.learning.modules.AppModule;
-import com.learn.learning.modules.BuildModule;
 
 import javax.inject.Singleton;
 

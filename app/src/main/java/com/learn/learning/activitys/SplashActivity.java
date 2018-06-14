@@ -1,4 +1,4 @@
-package com.learn.learning.activity;
+package com.learn.learning.activitys;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.learn.learning.R;
+import com.learn.learning.activitys.main.MainActivity;
 import com.learn.learning.app.ConstantsImageUrl;
 import com.learn.learning.app.GlideApp;
 import com.learn.learning.databinding.ActivitySplashBinding;

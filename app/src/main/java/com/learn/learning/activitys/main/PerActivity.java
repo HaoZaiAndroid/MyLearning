@@ -1,4 +1,4 @@
-package com.learn.learning.scopes;
+package com.learn.learning.activitys.main;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

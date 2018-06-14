@@ -9,7 +9,7 @@
         android:id="@+id/splash_root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.learn.learning.activity.SplashActivity">
+        tools:context="com.learn.learning.activitys.SplashActivity">
 
         <ImageView
             android:id="@+id/iv_default"

@@ -1,4 +1,4 @@
-package com.learn.learning.modules;
+package com.learn.learning.di;
 
 import android.content.Context;
 
