@@ -5,7 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activitys.main.MainDaggerActivity">
+        tools:context=".activitys.main.MainActivity">
         <!--状态栏-->
         <View
             android:id="@+id/view_status"
@@ -13,12 +13,12 @@
             android:layout_height="24dp"
             android:background="@color/colorTheme"
             android:visibility="visible" />
-        <RelativeLayout
-            android:layout_below="@id/view_status"
-            android:id="@+id/main_container"
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/main_view_pager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </RelativeLayout>
+            android:layout_height="match_parent"
+            android:layout_below="@id/view_status"/>
 
     </RelativeLayout>
 </layout>

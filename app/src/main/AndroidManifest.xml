@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activitys.main.MainDaggerActivity"
+        <activity android:name=".activitys.main.MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         </activity>

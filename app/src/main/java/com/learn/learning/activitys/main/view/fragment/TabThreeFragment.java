@@ -1,21 +1,20 @@
-package com.learn.learning.activitys.main;
+package com.learn.learning.activitys.main.view.fragment;
 
-import android.app.Fragment;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.learn.learning.R;
-import com.learn.learning.databinding.FragmentMainBinding;
+import com.learn.learning.databinding.FragmentTabThreeBinding;
 
-public class MainFragment extends Fragment{
+public class TabThreeFragment extends Fragment {
 
-   private FragmentMainBinding binding;
-
+    private FragmentTabThreeBinding binding;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,15 +24,15 @@ public class MainFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_main, container, false);
+        View view = inflater.inflate(R.layout.fragment_tab_three, container, false);
         binding = DataBindingUtil.bind(view);
         return view;
     }
 
 
-    public void showlog(){
+    public void showlog() {
 
-        Log.d("yh", "dagger2  mainFragment");
+        Log.d("yh", "dagger2  tabOneFragment");
     }
 
 }

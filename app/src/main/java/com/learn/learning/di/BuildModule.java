@@ -1,6 +1,6 @@
 package com.learn.learning.di;
 
-import com.learn.learning.activitys.main.MainDaggerActivity;
+import com.learn.learning.activitys.main.MainActivity;
 import com.learn.learning.activitys.main.MainActivityComponent;
 import com.learn.learning.activitys.main.MainActivityModule;
 import com.learn.learning.activitys.main.PerActivity;
@@ -13,5 +13,5 @@ public abstract class BuildModule {
 
     @PerActivity
     @ContributesAndroidInjector(modules = MainActivityModule.class)
-    abstract MainDaggerActivity mainActivityInjector();
+    abstract MainActivity mainActivityInjector();
 }

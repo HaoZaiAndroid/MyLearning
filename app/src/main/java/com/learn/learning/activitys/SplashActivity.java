@@ -11,7 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.learn.learning.R;
-import com.learn.learning.activitys.main.MainDaggerActivity;
+import com.learn.learning.activitys.main.MainActivity;
 import com.learn.learning.app.ConstantsImageUrl;
 import com.learn.learning.app.GlideApp;
 import com.learn.learning.databinding.ActivitySplashBinding;
@@ -54,7 +54,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void toMainActivity() {
-        Intent intent = new Intent(this, MainDaggerActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.screen_zoom_in, R.anim.screen_zoom_out);
         finish();
