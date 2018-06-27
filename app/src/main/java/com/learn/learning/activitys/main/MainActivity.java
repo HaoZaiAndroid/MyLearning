@@ -58,6 +58,7 @@ public class MainActivity extends BaseDaggerActivity implements View.OnClickList
         initStatusView();
         initFragment();
         initListener();
+        setCurrentItem(TAB_ONE_INDEX);
     }
     private void initListener() {
         ivTitleOne.setOnClickListener(this);
@@ -69,13 +70,12 @@ public class MainActivity extends BaseDaggerActivity implements View.OnClickList
 
 
     private void initId() {
-
+        drawerLayout = mainBinding.drawerRoot;
         ivTitleMenu = mainBinding.include.ivTitleMenu;
         mainViewPager = mainBinding.include.mainViewPager;
         ivTitleOne = mainBinding.include.ivTitleOne;
         ivTitleTwo = mainBinding.include.ivTitleTwo;
         ivTitleThree = mainBinding.include.ivTitleThree;
-        drawerLayout = mainBinding.drawerRoot;
     }
 
     private void initFragment() {
@@ -136,7 +136,7 @@ public class MainActivity extends BaseDaggerActivity implements View.OnClickList
                 isTwo = true;
                 break;
         }
-        //vpContent.setCurrentItem(position);
+        mainViewPager.setCurrentItem(position);
         ivTitleOne.setSelected(isOne);
         ivTitleTwo.setSelected(isTwo);
         ivTitleThree.setSelected(isThree);
