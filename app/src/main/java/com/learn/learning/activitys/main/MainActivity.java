@@ -53,6 +53,7 @@ public class MainActivity extends BaseDaggerActivity implements View.OnClickList
         mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         init();
     }
+
     private void init() {
         initId();
         initStatusView();
@@ -60,14 +61,13 @@ public class MainActivity extends BaseDaggerActivity implements View.OnClickList
         initListener();
         setCurrentItem(TAB_ONE_INDEX);
     }
+
     private void initListener() {
         ivTitleOne.setOnClickListener(this);
         ivTitleTwo.setOnClickListener(this);
         ivTitleThree.setOnClickListener(this);
         ivTitleMenu.setOnClickListener(this);
-
     }
-
 
     private void initId() {
         drawerLayout = mainBinding.drawerRoot;
@@ -116,6 +116,7 @@ public class MainActivity extends BaseDaggerActivity implements View.OnClickList
 
     /**
      * 切换页面
+     *
      * @param position 分类角标
      */
     private void setCurrentItem(int position) {
@@ -123,17 +124,17 @@ public class MainActivity extends BaseDaggerActivity implements View.OnClickList
         boolean isTwo = false;
         boolean isThree = false;
         switch (position) {
-            case 0:
+            case TAB_ONE_INDEX:
                 isOne = true;
                 break;
-            case 1:
+            case TAB_TWO_INDEX:
                 isTwo = true;
                 break;
-            case 2:
+            case TAB_THREE_INDEX:
                 isThree = true;
                 break;
             default:
-                isTwo = true;
+                isOne = true;
                 break;
         }
         mainViewPager.setCurrentItem(position);
