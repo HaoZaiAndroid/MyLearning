@@ -14,11 +14,68 @@
             android:background="@color/colorTheme"
             android:visibility="visible" />
 
+        <RelativeLayout
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titlebar_height"
+            android:layout_below="@+id/view_status"
+            android:background="@color/colorTheme">
+
+            <RelativeLayout
+
+                android:id="@+id/ll_title_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <ImageView
+                    android:id="@+id/iv_title_menu"
+                    android:layout_width="23dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/titlebar_menu" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                app:theme="@style/AppTheme">
+
+                <ImageView
+                    android:id="@+id/iv_title_one"
+                    android:layout_width="@dimen/titlebar_height"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/titlebar_music" />
+
+                <ImageView
+                    android:id="@+id/iv_title_two"
+                    android:layout_width="@dimen/titlebar_height"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/titlebar_disco" />
+
+                <ImageView
+                    android:id="@+id/iv_title_three"
+                    android:layout_width="@dimen/titlebar_height"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/titlebar_friends" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
         <android.support.v4.view.ViewPager
             android:id="@+id/main_view_pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/view_status"/>
+            android:layout_below="@id/title_bar" />
 
     </RelativeLayout>
 </layout>

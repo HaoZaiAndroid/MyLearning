@@ -1,4 +1,4 @@
-package com.learn.learning.activitys;
+package com.learn.learning.base;
 
 import android.graphics.Color;
 import android.os.Build;
