@@ -1,5 +1,6 @@
-package com.learn.learning.activitys.main;
+package com.learn.learning.activitys.main.di;
 
+import com.learn.learning.activitys.main.MainActivity;
 import com.learn.learning.activitys.main.view.adapter.MainPagerAdapter;
 import com.learn.learning.activitys.main.view.fragment.TabOneFragment;
 import com.learn.learning.activitys.main.view.fragment.TabThreeFragment;
@@ -10,7 +11,6 @@ import dagger.Provides;
 
 @Module
 public class MainActivityModule {
-
     @Provides
     public TabOneFragment getTabOnefragment() {
         return new TabOneFragment();

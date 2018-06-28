@@ -46,6 +46,13 @@ public class MainActivity extends BaseDaggerActivity implements View.OnClickList
     private ImageView ivTitleThree;
     private ImageView ivTitleMenu;
     private DrawerLayout drawerLayout;
+    private ViewPager.SimpleOnPageChangeListener pageChangeListener = new ViewPager.SimpleOnPageChangeListener() {
+        @Override
+        public void onPageSelected(int position) {
+            super.onPageSelected(position);
+            setCurrentItem(position);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +74,7 @@ public class MainActivity extends BaseDaggerActivity implements View.OnClickList
         ivTitleTwo.setOnClickListener(this);
         ivTitleThree.setOnClickListener(this);
         ivTitleMenu.setOnClickListener(this);
+        mainViewPager.addOnPageChangeListener(pageChangeListener);
     }
 
     private void initId() {
